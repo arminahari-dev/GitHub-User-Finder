@@ -5,12 +5,14 @@ interface SearchInputProps {
   setInput: React.Dispatch<React.SetStateAction<string>>;
   input: string;
   fetchUserData: (username: string) => void;
+  isloading: boolean;
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
   input,
   setInput,
   fetchUserData,
+  isloading,
 }) => {
   return (
     <div className="relative flex items-center bg-card-light shadow-2xl rounded-lg w-full h-[60px]">
@@ -26,7 +28,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
         className="bg-primary mr-4 px-4 py-2 rounded-md font-medium text-white cursor-pointer"
         onClick={() => fetchUserData(input)}
       >
-        Search
+        {isloading ? "loading ..." : "Search"}
       </button>
     </div>
   );

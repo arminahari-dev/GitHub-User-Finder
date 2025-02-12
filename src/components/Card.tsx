@@ -1,6 +1,6 @@
 import avatar from "../assets/images/avatar.png";
 
-interface Data {
+interface CardProps {
   avatar_url: string;
   name: string;
   location: string;
@@ -10,7 +10,7 @@ interface Data {
   following: number;
 }
 
-const Card: React.FC<{ userData: Data }> = ({ userData }) => {
+const Card: React.FC<{ userData: CardProps }> = ({ userData }) => {
   return (
     <div className="gap-x-8 grid grid-cols-[auto_1fr] bg-card-light shadow-2xl p-8 rounded-lg w-full h-[25rem]">
       <div>
@@ -22,7 +22,7 @@ const Card: React.FC<{ userData: Data }> = ({ userData }) => {
       <div className="flex flex-col gap-18">
         <div className="flex flex-col gap-2">
           <h2 className="font-bold text-[#586e90] text-2xl">
-            {userData?.name|| "Full Name"}
+            {userData?.name|| "unknown"}
           </h2>
           <p className="text-primary"> {userData?.location || "unknown"}</p>
           <span className="text-secondary">{userData?.bio || "Bio"}</span>
