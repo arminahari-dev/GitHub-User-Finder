@@ -15,7 +15,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
   isloading,
 }) => {
   return (
-    <div className="relative flex items-center bg-card-light dark:bg-card-dark shadow-2xl rounded-lg w-full h-[60px]">
+    <div className="flex items-center bg-card-light dark:bg-card-dark shadow-2xl rounded-lg w-full h-[60px]">
       <img src={searchIcon} alt="Search Icon" className="ml-4 w-5 h-5" />
       <input
         type="text"
@@ -25,7 +25,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
         placeholder="Search GitHub Username..."
       />
       <button
-        className="bg-primary mr-4 px-4 py-2 rounded-md font-medium text-white cursor-pointer"
+        className="bg-primary mr-4 max-[375px]:ml-[-3rem] px-3 py-2 rounded-md font-medium text-white cursor-pointer"
         onClick={() => fetchUserData(input)}
       >
         {isloading ? "loading ..." : "Search"}

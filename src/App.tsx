@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <div className="flex justify-center items-center bg-body-light dark:bg-body-dark h-screen">
-        <div className="flex flex-col justify-start gap-8 pt-8 w-[45%] h-screen">
+        <div className="flex flex-col justify-start gap-8 pt-8 w-[90%] md:w-[60%] h-screen">
           <Header />
           <SearchInput
             input={input}
