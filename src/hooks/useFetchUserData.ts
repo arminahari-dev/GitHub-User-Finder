@@ -36,7 +36,7 @@ const useFetchUserData = ({
       const response = await fetch(`https://api.github.com/users/${username}`);
       if (response.status === 404) throw new Error("No Record Found");
       const data = await response.json();
-      setUserData(data);
+      if (response.ok) setUserData(data);
       setIsloading(false);
     } catch (err) {
       setError((err as Error).message);
