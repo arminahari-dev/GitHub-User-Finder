@@ -15,7 +15,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
   isloading,
 }) => {
   return (
-    <div className="relative flex items-center bg-card-light shadow-2xl rounded-lg w-full h-[60px]">
+    <div className="relative flex items-center bg-card-light dark:bg-card-dark shadow-2xl rounded-lg w-full h-[60px]">
       <img src={searchIcon} alt="Search Icon" className="ml-4 w-5 h-5" />
       <input
         type="text"
